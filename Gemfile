@@ -19,7 +19,10 @@ gem "puma", "~> 5.0"
 gem "importmap-rails"
 
 # Tailwind
-gem 'tailwindcss-rails'
+gem 'tailwindcss-rails', '~> 2.0', '>= 2.0.24'
+
+# webpack
+gem 'webpack-rails', '~> 0.9.11'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
