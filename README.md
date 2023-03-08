@@ -1,24 +1,31 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+At first, i create the project
+<!-- rails new my-app
+cd my-app -->
 
-Things you may want to cover:
+Then, i run bundle and install tailwind
+<!-- ./bin/bundle add tailwindcss-rails
+./bin/rails tailwindcss:install -->
 
-* Ruby version
+Next, i replace the "content" in application.tailwind.css
+<!-- /** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './app/helpers/**/*.rb',
+    './app/javascript/**/*.js',
+    './app/views/**/*',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+} -->
 
-* System dependencies
+The last part was check in application.tailwind.css
+<!-- @tailwind base;
+@tailwind components;
+@tailwind utilities; -->
 
-* Configuration
+Now i have Tailwind in my project in RoR 7
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+!!! Another opcion is to use "rails new my-app --css tailwind" when i created the project !!!
